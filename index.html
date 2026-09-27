@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeanutSMP｜純原版生存伺服器</title>
+  <meta name="description" content="PeanutSMP — 純原版 Minecraft 基岩生存伺服器。無外掛、只有原版指令。IP: 192.168.0.11  Port: 19132" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🥜</span>
+        <span class="logo-text">PeanutSMP</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">特色亮點</a>
+        <a href="#join">連線資訊</a>
+        <a href="/docs.html">遊玩說明</a>
+        <a href="https://discord.gg/ajrVN9bqM6" target="_blank" rel="noopener">Discord</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://discord.gg/ajrVN9bqM6" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Discord</a>
+        <button class="btn btn-primary btn-sm" onclick="copyIP()">複製 IP</button>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">純原版 · 基岩版 · 無外掛</div>
+      <h1 class="hero-title"><span class="title-main">PeanutSMP</span><span class="title-sub">花生生存服</span></h1>
+      <p class="hero-desc">純原版 Minecraft 基岩生存伺服器。<br>沒有外掛、沒有領地系統，只有原版指令與純粹的生存樂趣。</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" onclick="copyIP()">複製伺服器 IP</button>
+        <a href="/docs.html" class="btn btn-secondary btn-lg">遊玩說明</a>
+      </div>
+      <div class="connect-cards">
+        <div class="connect-card">
+          <div class="connect-label">伺服器 IP</div>
+          <div class="connect-value mono">192.168.0.11</div>
+          <button class="btn-copy" onclick="copyText('192.168.0.11', this)">複製</button>
+        </div>
+        <div class="connect-card">
+          <div class="connect-label">連接埠 Port</div>
+          <div class="connect-value mono">19132</div>
+          <button class="btn-copy" onclick="copyText('19132', this)">複製</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="features" class="section features">
+    <div class="container">
+      <div class="section-header"><h2>伺服器特色</h2><p>完全原版，回歸最純粹的 Minecraft 體驗</p></div>
+      <div class="features-grid">
+        <article class="feature-card"><div class="feature-icon">🌾</div><h3>純原版生存</h3><p>沒有任何外掛或模組干預，只有原版指令與機制。</p></article>
+        <article class="feature-card"><div class="feature-icon">📜</div><h3>僅原版指令</h3><p>伺服器只開放原版指令，玩家可依權限使用 /tp、/gamemode 等官方指令。</p></article>
+        <article class="feature-card"><div class="feature-icon">🚪</div><h3>末地傳送門已開啟</h3><p>末地傳送門已經啟用，座標 <span class="mono">584 ~ -2488</span>，可直接 /tp 前往。</p></article>
+        <article class="feature-card"><div class="feature-icon">🗺️</div><h3>世界地圖查詢</h3><p>種子地圖已公開，方便規劃探索與建設。</p></article>
+        <article class="feature-card"><div class="feature-icon">🤝</div><h3>溫馨社群</h3><p>友善的玩家氛圍，適合新手與老玩家一起慢慢養、慢慢玩。</p></article>
+        <article class="feature-card"><div class="feature-icon">📱</div><h3>基岩版專屬</h3><p>專為手機、平板與 Windows 基岩版優化。</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="join" class="section join">
+    <div class="container">
+      <div class="section-header"><h2>如何加入 PeanutSMP</h2><p>簡單幾步，立刻進入花生生存世界</p></div>
+      <div class="join-grid">
+        <div class="join-steps">
+          <div class="step"><div class="step-num">1</div><div class="step-content"><h4>開啟 Minecraft 基岩版</h4><p>手機、平板或 Windows 10/11 基岩版皆可。</p></div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-content"><h4>進入「伺服器」分頁</h4><p>點選「新增伺服器」或「新增」。</p></div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-content"><h4>填入連線資訊</h4><p>位址與連接埠如下：</p><div class="info-pills"><span class="pill mono">IP：192.168.0.11</span><span class="pill mono">Port：19132</span></div></div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-content"><h4>儲存並連線</h4><p>完成後點選伺服器即可進入！</p></div></div>
+        </div>
+        <div class="join-card">
+          <div class="join-card-header"><span class="badge">基岩版</span><h3>連線資訊</h3></div>
+          <div class="join-info">
+            <div class="info-row"><span class="info-label">伺服器 IP</span><span class="info-value mono">192.168.0.11</span></div>
+            <div class="info-row"><span class="info-label">連接埠</span><span class="info-value mono">19132</span></div>
+            <div class="info-row"><span class="info-label">類型</span><span class="info-value">純原版 · 無外掛</span></div>
+          </div>
+          <button class="btn btn-primary btn-block" onclick="copyFull()">一鍵複製 IP 與 Port</button>
+          <p class="join-note">此為區網／私人伺服器位址。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-text">
+          <h2>關於 PeanutSMP</h2>
+          <p>PeanutSMP 是一個以「溫馨、輕鬆、純粹」為核心的 Minecraft 基岩版生存伺服器。我們堅持完全原版，沒有外掛、沒有領地系統，只保留官方指令。</p>
+          <ul class="about-list"><li>完全原版，無任何外掛</li><li>僅使用原版指令</li><li>末地傳送門已開啟</li></ul>
+          <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;"><a href="/docs.html" class="btn btn-primary">查看遊玩說明</a><a href="https://discord.gg/ajrVN9bqM6" target="_blank" rel="noopener" class="btn btn-secondary">加入 Discord</a></div>
+        </div>
+        <div class="about-visual"><div class="peanut-card"><div class="peanut-emoji">🥜</div><h3>PeanutSMP</h3><p>溫暖如花生的純原版世界</p></div></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><span class="logo-icon">🥜</span><span>PeanutSMP</span></div>
+      <div class="footer-links"><a href="/docs.html">遊玩說明</a><a href="https://discord.gg/ajrVN9bqM6" target="_blank" rel="noopener">Discord</a></div>
+      <p class="footer-copy">© 2026 PeanutSMP · IP: 192.168.0.11 · Port: 19132</p>
+    </div>
+  </footer>
+  <div id="toast" class="toast" aria-live="polite">已複製到剪貼簿</div>
+  <script src="script.js"></script>
+</body>
+</html>
