@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>遊玩說明｜PeanutSMP</title>
-  <meta name="description" content="PeanutSMP 遊玩說明 — 如何加入、原版指令、末地傳送門、世界地圖等資訊。" />
+  <meta name="description" content="PeanutSMP 遊玩說明 — 如何加入、原版指令、末地傳送門、世界地圖。IP: play.peanutsmp.de5.net" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,25 +13,116 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     .docs-page { padding: 48px 0 80px; }
-    .docs-layout { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start; }
-    @media (max-width: 800px) { .docs-layout { grid-template-columns: 1fr; } .docs-sidebar { display: none; } }
-    .docs-sidebar { position: sticky; top: calc(var(--nav-h) + 24px); }
-    .docs-nav { display: flex; flex-direction: column; gap: 4px; }
-    .docs-nav a { padding: 8px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--text-secondary); transition: background 150ms var(--ease-out), color 150ms var(--ease-out); }
-    .docs-nav a:hover { background: var(--accent-soft); color: var(--text); }
-    .docs-content h1 { font-size: clamp(28px, 4vw, 36px); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 8px; }
-    .docs-content .lead { font-size: 16px; color: var(--text-secondary); margin-bottom: 40px; }
-    .docs-section { margin-bottom: 48px; scroll-margin-top: calc(var(--nav-h) + 24px); }
-    .docs-section h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-    .docs-section h3 { font-size: 16px; font-weight: 700; margin: 20px 0 8px; }
-    .docs-section p, .docs-section li { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 10px; }
-    .docs-section ul, .docs-section ol { padding-left: 22px; margin-bottom: 16px; }
+    .docs-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .docs-layout { grid-template-columns: 1fr; }
+      .docs-sidebar { display: none; }
+    }
+    .docs-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 24px);
+    }
+    .docs-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .docs-nav a {
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: background 150ms var(--ease-out), color 150ms var(--ease-out);
+    }
+    .docs-nav a:hover {
+      background: var(--accent-soft);
+      color: var(--text);
+    }
+    .docs-content h1 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+    .docs-content .lead {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+    }
+    .docs-section {
+      margin-bottom: 48px;
+      scroll-margin-top: calc(var(--nav-h) + 24px);
+    }
+    .docs-section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .docs-section h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+    }
+    .docs-section p, .docs-section li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+    .docs-section ul, .docs-section ol {
+      padding-left: 22px;
+      margin-bottom: 16px;
+    }
     .docs-section li { margin-bottom: 6px; }
-    .cmd { display: inline-block; font-family: var(--font-mono); background: var(--bg-soft); border: 1px solid var(--border); border-radius: 6px; padding: 2px 8px; font-size: 13.5px; color: var(--text); }
-    .info-box { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; margin: 16px 0; }
-    .info-box.highlight { background: var(--accent-soft); border-color: rgba(196, 132, 45, 0.25); }
-    .info-box h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-    .map-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 12px 18px; background: var(--accent); color: #fff; border-radius: var(--radius-full); font-weight: 600; font-size: 14px; transition: background 160ms var(--ease-out), transform 160ms var(--ease-out); }
+    .cmd {
+      display: inline-block;
+      font-family: var(--font-mono);
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 13.5px;
+      color: var(--text);
+    }
+    .info-box {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin: 16px 0;
+    }
+    .info-box.highlight {
+      background: var(--accent-soft);
+      border-color: rgba(196, 132, 45, 0.25);
+    }
+    .info-box h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 12px 18px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 160ms var(--ease-out), transform 160ms var(--ease-out);
+    }
     .map-link:hover { background: var(--accent-hover); }
     .map-link:active { transform: scale(0.97); }
   </style>
@@ -39,10 +130,13 @@
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <a href="/" class="logo"><span class="logo-icon">🥜</span><span class="logo-text">PeanutSMP</span></a>
+      <a href="/" class="logo">
+        <span class="logo-icon">🥜</span>
+        <span class="logo-text">PeanutSMP</span>
+      </a>
       <nav class="nav-links">
         <a href="/">首頁</a>
-        <a href="/docs.html">遊玩說明</a>
+        <a href="/docs">遊玩說明</a>
         <a href="https://discord.gg/ajrVN9bqM6" target="_blank" rel="noopener">Discord</a>
       </nav>
       <div class="nav-actions">
@@ -69,34 +163,52 @@
 
         <div class="docs-content">
           <h1>遊玩說明</h1>
-          <p class="lead">歡迎來到 PeanutSMP！這裡是純原版基岩生存伺服器的完整說明。</p>
+          <p class="lead">歡迎來到 PeanutSMP！純原版、雙端互通生存伺服器的完整說明。</p>
 
           <section id="intro" class="docs-section">
             <h2>關於伺服器</h2>
-            <p>PeanutSMP 是一個<strong>完全原版</strong>的 Minecraft 基岩版生存伺服器。沒有任何外掛、沒有領地系統、沒有自訂經濟或任務系統，只有官方原版指令與機制。</p>
-            <p>我們希望打造一個溫暖、輕鬆、純粹的生存環境，讓玩家能專心探索、建築與交友。</p>
+            <p>
+              PeanutSMP 是一個<strong>完全原版</strong>的 Minecraft 生存伺服器，支援
+              <strong>Java 版與基岩版互通</strong>。
+              沒有外掛、沒有領地系統、沒有自訂經濟，只有官方原版指令與機制。
+            </p>
             <div class="info-box">
               <h4>伺服器資訊</h4>
-              <p style="margin:0;">IP：<span class="cmd">192.168.0.11</span><br>Port：<span class="cmd">19132</span><br>類型：純原版 · 基岩版 · 無外掛</p>
+              <p style="margin:0;">
+                位址：<span class="cmd">play.peanutsmp.de5.net</span><br>
+                Java Port：<span class="cmd">25565</span>（預設）<br>
+                基岩版 Port：<span class="cmd">19132</span>（預設）<br>
+                互通：是 · Java + 基岩版<br>
+                類型：純原版 · 無外掛
+              </p>
             </div>
           </section>
 
           <section id="join" class="docs-section">
             <h2>如何加入</h2>
+            <h3>Java 版</h3>
             <ol>
-              <li>開啟 Minecraft 基岩版（手機、平板或 Windows 10/11）。</li>
-              <li>進入「伺服器」分頁，點選「新增伺服器」。</li>
-              <li>伺服器名稱可自訂，位址填入 <span class="cmd">192.168.0.11</span>，連接埠填入 <span class="cmd">19132</span>。</li>
-              <li>儲存後點選伺服器即可連線進入。</li>
+              <li>開啟 Minecraft Java 版，進入「多人遊戲」。</li>
+              <li>點選「新增伺服器」。</li>
+              <li>伺服器位址填入 <span class="cmd">play.peanutsmp.de5.net</span>（Port 預設 25565，可省略）。</li>
+              <li>完成後連線即可進入。</li>
             </ol>
-            <p>注意：此 IP 為區網／私人伺服器位址，請確認你與伺服器位於相同網路環境。</p>
+            <h3>基岩版</h3>
+            <ol>
+              <li>開啟 Minecraft 基岩版（手機、平板或 Windows）。</li>
+              <li>進入「伺服器」分頁，點選「新增伺服器」。</li>
+              <li>位址填入 <span class="cmd">play.peanutsmp.de5.net</span>，連接埠 <span class="cmd">19132</span>（預設）。</li>
+              <li>儲存後點選伺服器連線。</li>
+            </ol>
           </section>
 
           <section id="commands" class="docs-section">
             <h2>原版指令</h2>
-            <p>伺服器<strong>只開放原版指令</strong>，沒有額外外掛指令。依你的權限等級，可使用以下官方指令（部分指令需管理員權限）：</p>
+            <p>
+              伺服器<strong>只開放原版指令</strong>，沒有額外外掛指令。依權限等級可使用例如：
+            </p>
             <ul>
-              <li><span class="cmd">/tp &lt;x&gt; &lt;y&gt; &lt;z&gt;</span> — 傳送至指定座標</li>
+              <li><span class="cmd">/tp <x> <y> <z></span> — 傳送至指定座標</li>
               <li><span class="cmd">/gamemode</span> — 切換遊戲模式（需權限）</li>
               <li><span class="cmd">/time set</span> — 設定時間（需權限）</li>
               <li><span class="cmd">/weather</span> — 設定天氣（需權限）</li>
@@ -111,16 +223,22 @@
             <p>末地傳送門<strong>已經開啟</strong>，無需再找要塞或啟動。</p>
             <div class="info-box highlight">
               <h4>末地傳送門座標</h4>
-              <p style="margin:0;font-size:18px;font-weight:600;"><span class="cmd">/tp 584 ~ -2488</span></p>
-              <p style="margin:8px 0 0;font-size:13.5px;">直接在遊戲中輸入上方指令即可傳送到末地傳送門附近。</p>
+              <p style="margin:0;font-size:18px;font-weight:600;">
+                <span class="cmd">/tp 584 ~ -2488</span>
+              </p>
+              <p style="margin:8px 0 0;font-size:13.5px;">
+                直接在遊戲中輸入上方指令即可傳送到末地傳送門附近。
+              </p>
             </div>
           </section>
 
           <section id="map" class="docs-section">
             <h2>世界地圖</h2>
-            <p>伺服器使用固定種子，世界地圖已公開，方便你規劃探索路線與建設位置。</p>
-            <p>種子：<span class="cmd">3092815048212636205</span>（基岩版）</p>
-            <a class="map-link" href="https://minecraftsearch.com/zh-TW/%E5%B7%A5%E5%85%B7/%E7%A8%AE%E5%AD%90%E5%9C%B0%E5%9C%96?seed=3092815048212636205&platform=bedrock_26.50&dimension=overworld#seed=3092815048212636205&platform=bedrock_26.50&dimension=overworld&x=33&z=285&zoom=14.850" target="_blank" rel="noopener">開啟世界地圖 →</a>
+            <p>伺服器使用固定種子，世界地圖已公開，方便規劃探索與建設。</p>
+            <p>種子：<span class="cmd">3092815048212636205</span></p>
+            <a class="map-link" href="https://minecraftsearch.com/zh-TW/%E5%B7%A5%E5%85%B7/%E7%A8%AE%E5%AD%90%E5%9C%B0%E5%9C%96?seed=3092815048212636205&platform=bedrock_26.50&dimension=overworld" target="_blank" rel="noopener">
+              開啟世界地圖 →
+            </a>
           </section>
 
           <section id="rules" class="docs-section">
@@ -136,7 +254,9 @@
           <section id="discord" class="docs-section">
             <h2>Discord 社群</h2>
             <p>加入官方 Discord 與其他玩家交流、回報問題或取得最新資訊。</p>
-            <a class="map-link" href="https://discord.gg/ajrVN9bqM6" target="_blank" rel="noopener">加入 Discord →</a>
+            <a class="map-link" href="https://discord.gg/ajrVN9bqM6" target="_blank" rel="noopener">
+              加入 Discord →
+            </a>
           </section>
         </div>
       </div>
@@ -145,13 +265,16 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-brand"><span class="logo-icon">🥜</span><span>PeanutSMP</span></div>
+      <div class="footer-brand">
+        <span class="logo-icon">🥜</span>
+        <span>PeanutSMP</span>
+      </div>
       <div class="footer-links">
         <a href="/">首頁</a>
-        <a href="/docs.html">遊玩說明</a>
+        <a href="/docs">遊玩說明</a>
         <a href="https://discord.gg/ajrVN9bqM6" target="_blank" rel="noopener">Discord</a>
       </div>
-      <p class="footer-copy">© 2026 PeanutSMP · IP: 192.168.0.11 · Port: 19132</p>
+      <p class="footer-copy">© 2026 PeanutSMP · play.peanutsmp.de5.net</p>
     </div>
   </footer>
 
